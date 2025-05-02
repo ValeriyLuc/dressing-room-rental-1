@@ -7,7 +7,7 @@ import typographyPlugin from "@tailwindcss/typography"
 const config = {
   darkMode: ["class"],
   content: [
-    './src/**/*.{ts,tsx}',
+    './src/**/*.{ts,tsx}'
   ],
   prefix: "",
   theme: {

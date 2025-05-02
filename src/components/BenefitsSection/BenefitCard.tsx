@@ -1,22 +1,26 @@
 
 import Icon from "@/components/ui/icon";
-import { LucideProps } from "lucide-react";
+import { Benefit } from "./constants";
 
-type BenefitCardProps = {
-  title: string;
-  description: string;
-  iconName: string;
-  fallbackIcon?: string;
-};
+interface BenefitCardProps {
+  benefit: Benefit;
+  index: number;
+}
 
-const BenefitCard = ({ title, description, iconName, fallbackIcon }: BenefitCardProps) => {
+/**
+ * Карточка преимущества для секции преимуществ
+ */
+const BenefitCard = ({ benefit, index }: BenefitCardProps) => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-sm flex flex-col items-center text-center hover-scale">
-      <div className="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
-        <Icon name={iconName} className="text-purple-700" fallback={fallbackIcon} size={24} />
+    <div 
+      className="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow animate-fade-in"
+      style={{ animationDelay: `${0.1 * index}s` }}
+    >
+      <div className="mb-4 bg-primary/10 p-3 rounded-full w-14 h-14 flex items-center justify-center">
+        <Icon name={benefit.icon} className="h-8 w-8 text-primary" />
       </div>
-      <h3 className="text-xl font-semibold mb-3">{title}</h3>
-      <p className="text-gray-600">{description}</p>
+      <h3 className="text-xl font-semibold mb-2">{benefit.title}</h3>
+      <p className="text-gray-600">{benefit.description}</p>
     </div>
   );
 };

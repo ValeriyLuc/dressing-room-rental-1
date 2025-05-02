@@ -1,26 +1,46 @@
 
-export type Benefit = {
+export interface Benefit {
+  id: string;
   title: string;
   description: string;
-  iconName: string;
-  fallbackIcon?: string;
-};
+  icon: string;
+}
 
-export const BENEFITS: Benefit[] = [
+export const benefits: Benefit[] = [
   {
+    id: "quality",
     title: "Премиальное качество",
-    description: "Все наше оборудование соответствует высоким стандартам качества для профессиональных съемок",
-    iconName: "Star"
+    description: "Все наше оборудование и мебель соответствуют высочайшим стандартам качества и регулярно обновляются",
+    icon: "Star"
   },
   {
-    title: "Быстрая доставка",
-    description: "Доставляем оборудование на вашу площадку в течение 24 часов после подтверждения заказа",
-    iconName: "Truck"
+    id: "delivery",
+    title: "Доставка и монтаж",
+    description: "Мы доставляем и устанавливаем оборудование на ваш объект, обеспечивая быстрый запуск съемочного процесса",
+    icon: "Truck"
   },
   {
-    title: "Техническая поддержка",
-    description: "Наши специалисты готовы помочь с установкой и настройкой оборудования в любое время",
-    iconName: "HeadSet",
-    fallbackIcon: "Headphones"
+    id: "support",
+    title: "24/7 поддержка",
+    description: "Наша техническая команда готова помочь с любыми вопросами в любое время суток во время работы с нашим оборудованием",
+    icon: "HeadsetHelp"
+  },
+  {
+    id: "flexibility",
+    title: "Гибкие условия аренды",
+    description: "Разнообразные варианты длительности аренды, от нескольких часов до нескольких месяцев, с возможностью продления",
+    icon: "Calendar"
+  },
+  {
+    id: "customization",
+    title: "Индивидуальные решения",
+    description: "Создаем уникальные комплекты оборудования под конкретные съемочные задачи и бюджетные ограничения",
+    icon: "Settings"
+  },
+  {
+    id: "insurance",
+    title: "Страхование оборудования",
+    description: "Ваше спокойствие важно для нас - все наше оборудование застраховано от повреждений и неисправностей",
+    icon: "Shield"
   }
 ];

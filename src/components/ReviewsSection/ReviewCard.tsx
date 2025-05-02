@@ -1,33 +1,50 @@
 
 import { Card } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
-import type { Review } from "./constants";
+import { Review } from "./constants";
 
-type ReviewCardProps = {
+interface ReviewCardProps {
   review: Review;
-  index: number;
-};
+}
 
-const ReviewCard = ({ review, index }: ReviewCardProps) => {
+/**
+ * Карточка отзыва для секции отзывов
+ */
+const ReviewCard = ({ review }: ReviewCardProps) => {
   return (
-    <Card className="p-6 hover-scale">
-      <div className="flex items-center mb-4">
-        {Array(5).fill(0).map((_, i) => (
-          <Icon key={i} name="Star" className="text-yellow-500 mr-1" size={16} />
+    <Card className="p-6 hover:shadow-md transition-shadow h-full flex flex-col">
+      {/* Рейтинг */}
+      <div className="flex mb-4">
+        {Array.from({ length: 5 }).map((_, i) => (
+          <Icon 
+            key={i} 
+            name="Star" 
+            className={`h-5 w-5 ${i < review.rating ? 'text-yellow-400' : 'text-gray-300'}`} 
+            fill={i < review.rating ? 'currentColor' : 'none'}
+          />
         ))}
       </div>
-      <p className="text-gray-700 italic mb-6">"{review.text}"</p>
+      
+      {/* Контент отзыва */}
+      <div className="mb-6 flex-grow">
+        <p className="text-gray-700 mb-4">"{review.content}"</p>
+        {review.project && (
+          <p className="text-sm text-gray-500 italic">Проект: {review.project}</p>
+        )}
+      </div>
+      
+      {/* Информация об авторе */}
       <div className="flex items-center">
-        <div className="w-12 h-12 bg-gray-300 rounded-full mr-4 overflow-hidden">
+        <div className="mr-4">
           <img 
-            src={`https://images.unsplash.com/photo-166064${index + 88000}?w=150&auto=format`} 
-            alt={review.name}
-            className="w-full h-full object-cover"
+            src={review.avatar} 
+            alt={review.author} 
+            className="h-12 w-12 rounded-full object-cover"
           />
         </div>
         <div>
-          <p className="font-semibold">{review.name}</p>
-          <p className="text-sm text-gray-600">{review.role}</p>
+          <h4 className="font-medium">{review.author}</h4>
+          <p className="text-sm text-gray-600">{review.position}, {review.company}</p>
         </div>
       </div>
     </Card>

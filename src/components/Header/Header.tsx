@@ -1,27 +1,40 @@
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Icon from "@/components/ui/icon";
-import { navigationItems } from "./constants";
+
+const navigationItems = [
+  { label: "Главная", href: "/" },
+  { label: "Каталог", href: "/catalog" },
+  { label: "Услуги", href: "/services" },
+  { label: "О нас", href: "/about" },
+  { label: "Проекты", href: "/projects" },
+  { label: "Контакты", href: "/contacts" }
+];
 
 /**
- * Компонент хедера сайта
+ * Шапка сайта с навигацией
  */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  // Обработчик скролла для изменения стиля хедера
-  if (typeof window !== "undefined") {
-    window.addEventListener("scroll", () => {
+  // Эффект для отслеживания скролла
+  useEffect(() => {
+    const handleScroll = () => {
       if (window.scrollY > 10) {
         setIsScrolled(true);
       } else {
         setIsScrolled(false);
       }
-    });
-  }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <header 
@@ -38,22 +51,22 @@ const Header = () => {
             <span className="text-xl font-bold text-primary">StudioRent</span>
           </Link>
 
-          {/* Основная навигация - только на десктопе */}
+          {/* Десктопная навигация */}
           <nav className="hidden md:flex items-center space-x-1">
             {navigationItems.map((item) => (
               <Link
                 key={item.label}
                 to={item.href}
-                className="px-4 py-2 text-gray-700 hover:text-primary transition-colors rounded-md"
+                className="px-4 py-2 hover:text-primary transition-colors rounded-md"
               >
                 {item.label}
               </Link>
             ))}
           </nav>
 
-          {/* Контактная информация - только на десктопе */}
+          {/* Контактная информация */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+74951234567" className="flex items-center text-gray-700 hover:text-primary">
+            <a href="tel:+74951234567" className="flex items-center hover:text-primary">
               <Icon name="Phone" className="mr-2 h-5 w-5" />
               <span>+7 (495) 123-45-67</span>
             </a>
@@ -64,7 +77,7 @@ const Header = () => {
 
           {/* Мобильное меню */}
           <div className="md:hidden flex items-center">
-            <a href="tel:+74951234567" className="mr-4 text-gray-700">
+            <a href="tel:+74951234567" className="mr-4">
               <Icon name="Phone" className="h-6 w-6" />
             </a>
             <Sheet>

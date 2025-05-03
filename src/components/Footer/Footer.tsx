@@ -2,55 +2,95 @@
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 import Icon from "@/components/ui/icon";
-import FooterSection from "./FooterSection";
-import ContactSection from "./ContactSection";
-import { footerSections, socialLinks } from "./constants";
 
 /**
- * Футер сайта аренды гримерок и мебели для съемок
+ * Компонент футера сайта
  */
 const Footer = () => {
   return (
     <footer className="bg-white border-t border-gray-200">
       <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Информация о компании */}
           <div>
             <div className="mb-4">
-              <img 
-                src="/public/logo-b.svg" 
-                alt="StudioRent Logo" 
-                className="h-10"
-              />
+              <span className="text-xl font-bold text-primary">StudioRent</span>
             </div>
             <p className="text-gray-600 mb-4">
               Профессиональная аренда гримерок и мебели для съемок шоу, фильмов и фотосессий.
-              Поможем создать идеальные условия для работы вашей съемочной группы.
+              Мы помогаем создать идеальные условия для работы вашей съемочной группы.
             </p>
             <div className="flex space-x-3">
-              {socialLinks.map((link, index) => (
-                <a
-                  key={index}
-                  href={link.url}
-                  className="h-9 w-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label={link.label}
-                >
-                  <Icon name={link.icon} className="h-5 w-5" />
-                </a>
-              ))}
+              <a
+                href="#"
+                className="h-9 w-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"
+                aria-label="Telegram"
+              >
+                <Icon name="Send" className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="h-9 w-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"
+                aria-label="VK"
+              >
+                <Icon name="MessageCircle" className="h-5 w-5" />
+              </a>
+              <a
+                href="#"
+                className="h-9 w-9 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-colors"
+                aria-label="Instagram"
+              >
+                <Icon name="Instagram" className="h-5 w-5" />
+              </a>
             </div>
           </div>
           
-          {/* Разделы футера */}
-          {footerSections.map((section, index) => (
-            <FooterSection key={index} section={section} />
-          ))}
+          {/* Навигация */}
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Каталог</h3>
+            <ul className="space-y-2">
+              <li><a href="/catalog" className="text-gray-600 hover:text-primary">Гримерные комнаты</a></li>
+              <li><a href="/catalog" className="text-gray-600 hover:text-primary">Мебель для съемок</a></li>
+              <li><a href="/catalog" className="text-gray-600 hover:text-primary">Освещение</a></li>
+              <li><a href="/catalog" className="text-gray-600 hover:text-primary">Аксессуары</a></li>
+            </ul>
+          </div>
+          
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Информация</h3>
+            <ul className="space-y-2">
+              <li><a href="/about" className="text-gray-600 hover:text-primary">О компании</a></li>
+              <li><a href="/services" className="text-gray-600 hover:text-primary">Услуги</a></li>
+              <li><a href="/projects" className="text-gray-600 hover:text-primary">Проекты</a></li>
+              <li><a href="/contacts" className="text-gray-600 hover:text-primary">Контакты</a></li>
+            </ul>
+          </div>
           
           {/* Контактная информация */}
-          <div className="lg:col-span-1">
-            <ContactSection />
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Контакты</h3>
+            <div className="space-y-3">
+              <div className="flex items-start">
+                <Icon name="MapPin" className="h-5 w-5 text-gray-500 mr-3 mt-0.5" />
+                <span className="text-gray-600">г. Москва, ул. Киностудийная, 42</span>
+              </div>
+              <div className="flex items-start">
+                <Icon name="Phone" className="h-5 w-5 text-gray-500 mr-3 mt-0.5" />
+                <span className="text-gray-600">+7 (495) 123-45-67</span>
+              </div>
+              <div className="flex items-start">
+                <Icon name="Mail" className="h-5 w-5 text-gray-500 mr-3 mt-0.5" />
+                <span className="text-gray-600">info@studiorent.ru</span>
+              </div>
+              <div className="flex items-start">
+                <Icon name="Clock" className="h-5 w-5 text-gray-500 mr-3 mt-0.5" />
+                <span className="text-gray-600">Пн-Вс: 9:00 - 21:00</span>
+              </div>
+            </div>
+            
+            <Button variant="outline" className="mt-4 w-full">
+              Связаться с нами
+            </Button>
           </div>
         </div>
         
@@ -62,8 +102,8 @@ const Footer = () => {
             © {new Date().getFullYear()} StudioRent. Все права защищены.
           </p>
           <div className="flex space-x-4 text-sm text-gray-500">
-            <a href="/privacy" className="hover:text-primary">Политика конфиденциальности</a>
-            <a href="/terms" className="hover:text-primary">Условия использования</a>
+            <a href="#" className="hover:text-primary">Политика конфиденциальности</a>
+            <a href="#" className="hover:text-primary">Условия использования</a>
           </div>
         </div>
       </div>

@@ -79,7 +79,7 @@ const Index = () => {
             <div className="bg-white rounded-lg shadow-sm overflow-hidden group hover:shadow-md transition-shadow">
               <div className="h-48 overflow-hidden">
                 <img 
-                  src="https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" 
+                  src="https://cdn.poehali.dev/files/ef154eac-115f-4356-9945-6f0847be6e7b.jpg" 
                   alt="Гримерные комнаты" 
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                 />

@@ -75,7 +75,7 @@ const Index = () => {
             </p>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6 mb-10">
             <div className="bg-white rounded-lg shadow-sm overflow-hidden group hover:shadow-md transition-shadow">
               <div className="h-48 overflow-hidden">
                 <img 
@@ -88,6 +88,26 @@ const Index = () => {
                 <h3 className="text-lg font-semibold mb-2">Гримерные комнаты</h3>
                 <p className="text-gray-600 text-sm mb-4">
                   Просторные и комфортные гримерные комнаты с профессиональным освещением
+                </p>
+                <Button variant="ghost" size="sm" className="font-medium flex items-center">
+                  Подробнее
+                  <Icon name="ArrowRight" className="ml-1 h-4 w-4" />
+                </Button>
+              </div>
+            </div>
+            
+            <div className="bg-white rounded-lg shadow-sm overflow-hidden group hover:shadow-md transition-shadow">
+              <div className="h-48 overflow-hidden">
+                <img 
+                  src="https://cdn.poehali.dev/files/e5dcf469-87d4-4a84-a23c-c0dde1b59eaf.jpg" 
+                  alt="Гримёрные столы" 
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                />
+              </div>
+              <div className="p-5">
+                <h3 className="text-lg font-semibold mb-2">Гримёрные столы</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Профессиональные гримёрные столы с подсветкой для качественного макияжа
                 </p>
                 <Button variant="ghost" size="sm" className="font-medium flex items-center">
                   Подробнее

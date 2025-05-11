@@ -1,6 +1,5 @@
-
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import Icon from "@/components/ui/icon";
@@ -11,7 +10,7 @@ const navigationItems = [
   { label: "Услуги", href: "/services" },
   { label: "О нас", href: "/about" },
   { label: "Проекты", href: "/projects" },
-  { label: "Контакты", href: "/contacts" }
+  { label: "Контакты", href: "/contacts" },
 ];
 
 /**
@@ -19,6 +18,7 @@ const navigationItems = [
  */
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
+  const location = useLocation();
 
   // Эффект для отслеживания скролла
   useEffect(() => {
@@ -37,11 +37,9 @@ const Header = () => {
   }, []);
 
   return (
-    <header 
+    <header
       className={`sticky top-0 z-50 w-full transition-all duration-300 ${
-        isScrolled 
-          ? "bg-white shadow-md py-2" 
-          : "bg-transparent py-4"
+        isScrolled ? "bg-white shadow-md py-2" : "bg-transparent py-4"
       }`}
     >
       <div className="container mx-auto px-4">
@@ -57,7 +55,7 @@ const Header = () => {
               <Link
                 key={item.label}
                 to={item.href}
-                className="px-4 py-2 hover:text-primary transition-colors rounded-md"
+                className={`px-4 py-2 hover:text-primary transition-colors rounded-md ${location.pathname === item.href ? "text-primary" : ""}`}
               >
                 {item.label}
               </Link>
@@ -66,13 +64,14 @@ const Header = () => {
 
           {/* Контактная информация */}
           <div className="hidden md:flex items-center space-x-4">
-            <a href="tel:+74951234567" className="flex items-center hover:text-primary">
+            <a
+              href="tel:+74951234567"
+              className="flex items-center hover:text-primary"
+            >
               <Icon name="Phone" className="mr-2 h-5 w-5" />
               <span>+7 (495) 123-45-67</span>
             </a>
-            <Button>
-              Заказать звонок
-            </Button>
+            <Button>Заказать звонок</Button>
           </div>
 
           {/* Мобильное меню */}
@@ -92,14 +91,12 @@ const Header = () => {
                     <Link
                       key={item.label}
                       to={item.href}
-                      className="px-4 py-2 text-lg font-medium hover:text-primary transition-colors"
+                      className={`px-4 py-2 text-lg font-medium hover:text-primary transition-colors ${location.pathname === item.href ? "text-primary" : ""}`}
                     >
                       {item.label}
                     </Link>
                   ))}
-                  <Button className="mt-4">
-                    Заказать звонок
-                  </Button>
+                  <Button className="mt-4">Заказать звонок</Button>
                 </div>
               </SheetContent>
             </Sheet>

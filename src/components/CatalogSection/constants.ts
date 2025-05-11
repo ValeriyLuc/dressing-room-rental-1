@@ -22,7 +22,7 @@ export const categories: Category[] = [
     description:
       "Просторные и функциональные гримерки различных размеров с профессиональным освещением",
     image:
-      "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/680288b0-40d6-4561-adc3-9483d207d723.jpg",
   },
   {
     id: "makeup-tables",

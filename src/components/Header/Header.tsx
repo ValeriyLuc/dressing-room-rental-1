@@ -65,11 +65,11 @@ const Header = () => {
           {/* Контактная информация */}
           <div className="hidden md:flex items-center space-x-4">
             <a
-              href="tel:+74951234567"
+              href="tel:+79688308855"
               className="flex items-center hover:text-primary"
             >
               <Icon name="Phone" className="mr-2 h-5 w-5" />
-              <span>+7 (495) 123-45-67</span>
+              <span>+7 (968) 830-88-55</span>
             </a>
             <Button>Заказать звонок</Button>
           </div>

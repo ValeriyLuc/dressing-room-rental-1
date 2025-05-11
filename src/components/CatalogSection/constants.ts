@@ -73,14 +73,14 @@ export const products: Product[] = [
   },
   {
     id: "makeup-room-premium",
-    name: "Премиум гримерка",
+    name: "Звукоизоляционная комната",
     description:
-      "Расширенная гримерка с профессиональным LED-освещением, зеркалами и местом для 5-6 человек",
+      "Специально разработанное пространство с максимальной звуковой изоляцией для комфортной подготовки участников телевизионных шоу",
     price: 25000,
     image:
       "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "makeup-rooms",
-    tags: ["премиум", "просторная"],
+    tags: ["звукоизоляция", "премиум"],
   },
   {
     id: "makeup-room-mobile",

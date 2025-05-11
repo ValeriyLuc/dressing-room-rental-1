@@ -1,4 +1,3 @@
-
 export interface Category {
   id: string;
   name: string;
@@ -20,27 +19,43 @@ export const categories: Category[] = [
   {
     id: "makeup-rooms",
     name: "Гримерные комнаты",
-    description: "Просторные и функциональные гримерки различных размеров с профессиональным освещением",
-    image: "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    description:
+      "Просторные и функциональные гримерки различных размеров с профессиональным освещением",
+    image:
+      "https://images.unsplash.com/photo-1598970434795-0c54fe7c0648?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
+  {
+    id: "makeup-tables",
+    name: "Гримёрные столы",
+    description:
+      "Профессиональные гримёрные столы с качественным освещением для идеального макияжа",
+    image:
+      "https://images.unsplash.com/photo-1582544888600-c5f5450d5b6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "furniture",
     name: "Мебель для съемок",
-    description: "Стильная и функциональная мебель для оформления съемочных площадок и декораций",
-    image: "https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    description:
+      "Стильная и функциональная мебель для оформления съемочных площадок и декораций",
+    image:
+      "https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "lighting",
     name: "Освещение",
-    description: "Профессиональное осветительное оборудование для создания нужной атмосферы",
-    image: "https://images.unsplash.com/photo-1565896311009-382b9e813b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+    description:
+      "Профессиональное осветительное оборудование для создания нужной атмосферы",
+    image:
+      "https://images.unsplash.com/photo-1565896311009-382b9e813b19?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
   },
   {
     id: "accessories",
     name: "Аксессуары",
-    description: "Дополнительные элементы для комфортной работы съемочной группы",
-    image: "https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
-  }
+    description:
+      "Дополнительные элементы для комфортной работы съемочной группы",
+    image:
+      "https://images.unsplash.com/photo-1522199710521-72d69614c702?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+  },
 ];
 
 export const products: Product[] = [
@@ -48,57 +63,102 @@ export const products: Product[] = [
   {
     id: "makeup-room-standard",
     name: "Стандартная гримерка",
-    description: "Функциональная гримерная комната с комфортным освещением и местом для 2-3 человек",
+    description:
+      "Функциональная гримерная комната с комфортным освещением и местом для 2-3 человек",
     price: 15000,
-    image: "https://images.unsplash.com/photo-1502005097973-6a7082348e28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "makeup-rooms",
-    tags: ["стандарт", "компактная"]
+    tags: ["стандарт", "компактная"],
   },
   {
     id: "makeup-room-premium",
     name: "Премиум гримерка",
-    description: "Расширенная гримерка с профессиональным LED-освещением, зеркалами и местом для 5-6 человек",
+    description:
+      "Расширенная гримерка с профессиональным LED-освещением, зеркалами и местом для 5-6 человек",
     price: 25000,
-    image: "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "makeup-rooms",
-    tags: ["премиум", "просторная"]
+    tags: ["премиум", "просторная"],
   },
   {
     id: "makeup-room-mobile",
     name: "Мобильная гримерка",
-    description: "Компактная передвижная гримерная, идеальная для локаций вне студии",
+    description:
+      "Компактная передвижная гримерная, идеальная для локаций вне студии",
     price: 12000,
-    image: "https://images.unsplash.com/photo-1568385247005-0d371d214a2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1568385247005-0d371d214a2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "makeup-rooms",
-    tags: ["мобильная", "компактная"]
+    tags: ["мобильная", "компактная"],
+  },
+
+  // Гримёрные столы
+  {
+    id: "makeup-table-standard",
+    name: "Стандартный гримерный стол",
+    description:
+      "Удобный гримерный стол с зеркалом и встроенной подсветкой для профессионального макияжа",
+    price: 5000,
+    image:
+      "https://images.unsplash.com/photo-1582544888600-c5f5450d5b6a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "makeup-tables",
+    tags: ["стандарт", "подсветка"],
+  },
+  {
+    id: "makeup-table-premium",
+    name: "Премиум гримерный стол",
+    description:
+      "Гримерный стол с большим зеркалом, регулируемой LED-подсветкой и ящиками для хранения",
+    price: 8000,
+    image:
+      "https://images.unsplash.com/photo-1600255821009-45c01293f4a7?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "makeup-tables",
+    tags: ["премиум", "LED-подсветка"],
+  },
+  {
+    id: "makeup-table-portable",
+    name: "Портативный гримерный стол",
+    description:
+      "Компактный складной гримерный стол с зеркалом и подсветкой, идеален для выездных работ",
+    price: 3500,
+    image:
+      "https://images.unsplash.com/photo-1590439471364-192aa70c0b53?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    category: "makeup-tables",
+    tags: ["портативный", "складной"],
   },
 
   // Мебель для съемок
   {
     id: "sofa-retro",
     name: "Ретро диван",
-    description: "Винтажный диван в стиле 70-х годов, идеален для исторических съемок",
+    description:
+      "Винтажный диван в стиле 70-х годов, идеален для исторических съемок",
     price: 8000,
-    image: "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "furniture",
-    tags: ["диван", "ретро", "винтаж"]
+    tags: ["диван", "ретро", "винтаж"],
   },
   {
     id: "chair-director",
     name: "Режиссерское кресло",
     description: "Классическое режиссерское кресло с вышитым именем",
     price: 3500,
-    image: "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "furniture",
-    tags: ["кресло", "режиссерское"]
+    tags: ["кресло", "режиссерское"],
   },
   {
     id: "table-makeup",
     name: "Гримерный стол",
     description: "Профессиональный стол для гримера с ящиками и подсветкой",
     price: 7000,
-    image: "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+    image:
+      "https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "furniture",
-    tags: ["стол", "гримерный"]
-  }
+    tags: ["стол", "гримерный"],
+  },
 ];

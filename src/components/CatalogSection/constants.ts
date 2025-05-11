@@ -67,7 +67,7 @@ export const products: Product[] = [
       "Функциональная гримерная комната с комфортным освещением и местом для 2-3 человек",
     price: 15000,
     image:
-      "https://images.unsplash.com/photo-1502005097973-6a7082348e28?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/3f5cc244-bf81-4bfa-bcda-f7cb247acf86.jpg",
     category: "makeup-rooms",
     tags: ["стандарт", "компактная"],
   },

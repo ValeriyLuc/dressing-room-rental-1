@@ -79,7 +79,7 @@ const CategoryDetail = () => {
       ],
       gallery: [
         {
-          url: "https://cdn.poehali.dev/files/680288b0-40d6-4561-adc3-9483d207d723.jpg",
+          url: "https://cdn.poehali.dev/files/3f5cc244-bf81-4bfa-bcda-f7cb247acf86.jpg",
           title: "Гримерные комнаты в павильоне",
         },
         {

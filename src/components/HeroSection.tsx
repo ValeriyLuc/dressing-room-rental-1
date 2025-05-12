@@ -12,11 +12,11 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
-            "url('https://images.unsplash.com/photo-1504507926119-51c48b77a052?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80')",
-          opacity: 0.5,
+            "url('https://cdn.poehali.dev/files/95eac12c-2413-4517-afe6-a4f84e49348c.jpg')",
+          opacity: 0.4,
         }}
       >
-        <div className="absolute inset-0 bg-black/70" />
+        <div className="absolute inset-0 bg-black/60" />
       </div>
 
       {/* Контент */}

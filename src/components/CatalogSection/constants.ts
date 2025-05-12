@@ -144,10 +144,11 @@ export const products: Product[] = [
   {
     id: "chair-director",
     name: "Режиссерское кресло",
-    description: "Классическое режиссерское кресло с вышитым именем",
+    description:
+      "Классическое режиссерское кресло с вышитым именем, символ творчества и вдохновения. Высокие подлокотники и спинка обеспечивают поддержку во время долгих часов работы.",
     price: 3500,
     image:
-      "https://images.unsplash.com/photo-1581539250439-c96689b516dd?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
     category: "furniture",
     tags: ["кресло", "режиссерское"],
   },

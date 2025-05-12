@@ -17,15 +17,11 @@ const CategoryDetail = () => {
   const { categoryId } = useParams<{ categoryId: string }>();
   const [activeTab, setActiveTab] = useState("description");
 
-  // Находим выбранную категорию
   const category = categories.find((cat) => cat.id === categoryId);
-
-  // Фильтруем товары по выбранной категории
   const categoryProducts = products.filter(
     (product) => product.category === categoryId,
   );
 
-  // Если категория не найдена
   if (!category) {
     return (
       <div className="min-h-screen flex flex-col">
@@ -48,7 +44,6 @@ const CategoryDetail = () => {
     );
   }
 
-  // Описания категорий (в реальном проекте это может приходить с бэкенда)
   const categoryDescriptions: Record<
     string,
     {
@@ -102,7 +97,6 @@ const CategoryDetail = () => {
       additionalInfo:
         "Звукоизоляционная гримерная комната — это специально разработанное пространство, предназначенное для комфортной подготовки участников телевизионных шоу. Она обеспечивает максимальную звуковую изоляцию, что позволяет артистам и телеведущим сосредоточиться на своей работе без отвлекающих шумов с внешней стороны.\n\nОсобенности гримерной комнаты:\n1. Звукоизоляция: Стены, потолок и пол комнаты обработаны специальными звукопоглощающими материалами, предотвращающими проникновение внешнего шума и создающими идеальные условия для подготовки.\n2. Комфортное освещение: Освещение гримерной комнаты регулируется, что позволяет выбрать оптимальный уровень яркости для макияжа и подготовки к выступлению.\n3. Современная мебель: Комната оборудована удобными креслами и зеркалами с подсветкой, а также удобными столами для размещения косметики и аксессуаров.\n4. Вентиляция и климат-контроль: Система вентиляции гарантирует приток свежего воздуха, а климат-контроль поддерживает комфортную температуру и уровень влажности.\n5. Акустические панели: Специальные акустические панели на стенах помогают не только улучшить звукоизоляцию, но и создать эстетически привлекательный интерьер.\n\nЗвукоизоляционная гримерная комната — это идеальное место для подготовки перед выходом на сцену, обеспечивающее участникам необходимый комфорт и концентрацию для достижения наилучших результатов в их выступлениях.",
     },
-    // ... другие категории без изменений
     accessories: {
       full: 'В категории "Аксессуары" представлены необходимые предметы, которые помогут организовать пространство для гримерки, сделать его более функциональным и удобным.',
       specs: [
@@ -123,7 +117,7 @@ const CategoryDetail = () => {
       ],
       gallery: [
         {
-          url: "https://cdn.poehali.dev/files/47f12385-8c1a-4b13-ad75-149f6cd6eeef.jpg",
+          url: "https://cdn.poehali.dev/files/431dccb2-51df-441e-a953-408c35d0c61b.jpg",
           title: "Основные аксессуары: рейл, стул и урна",
         },
         {
@@ -184,10 +178,8 @@ const CategoryDetail = () => {
       additionalInfo:
         "Режиссерское кресло — это не просто предмет мебели, а символ творчества и вдохновения. Высокие подлокотники и спинка обеспечивают поддержку во время долгих часов работы. Оно может быть оснащено механизмом, позволяющим регулировать угол наклона, что делает его удобным для различных ситуаций. Часто кресло украшено яркими надписями или логотипами, что подчеркивает индивидуальность его владельца.",
     },
-    // ... другие категории без изменений
   };
 
-  // Получаем данные для текущей категории
   const categoryData = categoryDescriptions[categoryId || ""] || {
     full: "Подробное описание отсутствует.",
     specs: [],
@@ -198,7 +190,6 @@ const CategoryDetail = () => {
   return (
     <div className="min-h-screen flex flex-col">
       <Header />
-      {/* Хедер страницы */}
       <div className="bg-primary text-white py-12">
         <div className="container mx-auto px-4">
           <h1 className="text-3xl md:text-4xl font-bold mb-4">
@@ -218,7 +209,6 @@ const CategoryDetail = () => {
         </div>
       </div>
       <div className="container mx-auto px-4 py-12 flex-grow">
-        {/* Основная информация */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
           <div>
             <div className="bg-white rounded-lg shadow-md overflow-hidden h-80">
@@ -260,7 +250,6 @@ const CategoryDetail = () => {
             </div>
           </div>
         </div>
-        {/* Табы с информацией */}
         <Tabs value={activeTab} onValueChange={setActiveTab} className="mb-10">
           <TabsList className="w-full md:w-auto grid grid-cols-3 md:inline-flex">
             <TabsTrigger value="description">Описание</TabsTrigger>
@@ -338,7 +327,6 @@ const CategoryDetail = () => {
             </TabsContent>
           </div>
         </Tabs>
-        {/* Товары в этой категории */}
         <h2 className="text-2xl font-bold mb-6">Доступное оборудование</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {categoryProducts.map((product) => (
@@ -378,7 +366,6 @@ const CategoryDetail = () => {
             </div>
           ))}
         </div>
-        {/* CTA */}
         <div className="bg-primary/5 rounded-lg p-8 text-center">
           <h3 className="text-2xl font-bold mb-3">Нужна помощь с выбором?</h3>
           <p className="text-gray-600 mb-6 max-w-2xl mx-auto">

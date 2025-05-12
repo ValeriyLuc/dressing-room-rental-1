@@ -148,7 +148,7 @@ export const products: Product[] = [
       "Классическое режиссерское кресло с вышитым именем, символ творчества и вдохновения. Высокие подлокотники и спинка обеспечивают поддержку во время долгих часов работы.",
     price: 3500,
     image:
-      "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/ca43fcde-3d4a-432e-bd4e-bcce22136f9f.jpg",
     category: "furniture",
     tags: ["кресло", "режиссерское"],
   },

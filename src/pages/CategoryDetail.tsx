@@ -169,7 +169,7 @@ const CategoryDetail = () => {
           title: "Мебель для современных интерьеров",
         },
         {
-          url: "https://images.unsplash.com/photo-1503602642458-232111445657?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+          url: "https://cdn.poehali.dev/files/ca43fcde-3d4a-432e-bd4e-bcce22136f9f.jpg",
           title: "Режиссерское кресло",
         },
         {

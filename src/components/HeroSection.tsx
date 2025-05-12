@@ -12,7 +12,7 @@ const HeroSection = () => {
         className="absolute inset-0 bg-cover bg-center z-0"
         style={{
           backgroundImage:
-            "url('https://cdn.poehali.dev/files/57bed735-bd84-4eb5-be5b-07319d57e56f.jpg')",
+            "url('https://cdn.poehali.dev/files/a006abe5-3291-470c-b27b-912c3db0ed4d.jpg')",
           opacity: 0.4,
         }}
       >

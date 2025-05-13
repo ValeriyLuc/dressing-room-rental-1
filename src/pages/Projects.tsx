@@ -50,14 +50,14 @@ const projects = [
   },
   {
     id: "project3",
-    title: "Утреннее шоу 'Бодрость'",
+    title: "Ну-ка, все вместе!",
     category: "shows",
-    year: "2023",
-    client: "Первый канал",
+    year: "2024",
+    client: "телеканал НТВ",
     description:
-      "Популярное утреннее шоу с ведущими звездами. Наша компания обеспечивает гримерные комнаты для ведущих и гостей на постоянной основе.",
+      "Масштабное музыкальное шоу, где участники выступают перед сотней судей. Наша компания обеспечила гримерные комнаты и зоны подготовки для конкурсантов и судей.",
     image:
-      "https://images.unsplash.com/photo-1551185618-5d9d2d4d6ee3?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/5c3a0fdf-f45e-4c15-935c-37fbca283d98.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1582152629442-4a864303fb96?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1539723986919-d09373d81b9b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",

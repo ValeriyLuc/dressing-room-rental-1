@@ -54,7 +54,7 @@ export const categories: Category[] = [
     description:
       "Дополнительные элементы для комфортной работы съемочной группы",
     image:
-      "https://cdn.poehali.dev/files/431dccb2-51df-441e-a953-408c35d0c61b.jpg",
+      "https://cdn.poehali.dev/files/78a7165e-39b4-4118-890c-ea8ee21f6226.jpg",
   },
 ];
 

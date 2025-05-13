@@ -78,8 +78,8 @@ const CategoryDetail = () => {
           title: "Гримерные комнаты в павильоне",
         },
         {
-          url: "https://images.unsplash.com/photo-1594125894650-8c657936656e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
-          title: "Интерьер гримерной комнаты",
+          url: "https://cdn.poehali.dev/files/625cc90b-5f85-4bfa-9993-c31434abd0d4.jpg",
+          title: "Звукоизоляционная гримерная комната",
         },
         {
           url: "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
@@ -117,8 +117,8 @@ const CategoryDetail = () => {
       ],
       gallery: [
         {
-          url: "https://cdn.poehali.dev/files/431dccb2-51df-441e-a953-408c35d0c61b.jpg",
-          title: "Основные аксессуары: рейл, стул и урна",
+          url: "https://cdn.poehali.dev/files/78a7165e-39b4-4118-890c-ea8ee21f6226.jpg",
+          title: "Основные аксессуары: рейл, урна и стул",
         },
         {
           url: "https://images.unsplash.com/photo-1567016432779-094069958ea5?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -248,12 +248,14 @@ const CategoryDetail = () => {
               </div>
               <p className="text-gray-700 mb-6">{category.description}</p>
               <div className="grid grid-cols-2 gap-4 mb-6">
-                {categoryData.specs.slice(0, 4).map((spec, index) => (
-                  <div key={index} className="flex flex-col">
-                    <span className="text-sm text-gray-500">{spec.name}</span>
-                    <span className="font-medium">{spec.value}</span>
-                  </div>
-                ))}
+                {categoryDescriptions[categoryId].specs
+                  .slice(0, 4)
+                  .map((spec, index) => (
+                    <div key={index} className="flex flex-col">
+                      <span className="text-sm text-gray-500">{spec.name}</span>
+                      <span className="font-medium">{spec.value}</span>
+                    </div>
+                  ))}
               </div>
               <Separator className="my-6" />
               <div className="flex flex-col sm:flex-row gap-4">
@@ -278,7 +280,9 @@ const CategoryDetail = () => {
           <div className="bg-white rounded-lg shadow-sm mt-4 p-6">
             <TabsContent value="description" className="mt-0">
               <h3 className="text-xl font-semibold mb-4">Подробное описание</h3>
-              <p className="text-gray-700 mb-6">{categoryData.full}</p>
+              <p className="text-gray-700 mb-6">
+                {categoryDescriptions[categoryId].full}
+              </p>
 
               {categoryId === "makeup-rooms" && (
                 <div className="bg-gray-50 p-4 rounded-lg mb-6 border-l-4 border-primary">
@@ -295,9 +299,9 @@ const CategoryDetail = () => {
                 </div>
               )}
 
-              {categoryData.additionalInfo && (
+              {categoryDescriptions[categoryId].additionalInfo && (
                 <div className="bg-gray-50 p-4 rounded-lg mb-6 border-l-4 border-primary">
-                  {categoryData.additionalInfo
+                  {categoryDescriptions[categoryId].additionalInfo
                     .split("\n\n")
                     .map((paragraph, index) => (
                       <p key={index} className="text-gray-700 mb-4 last:mb-0">
@@ -311,15 +315,17 @@ const CategoryDetail = () => {
                 Особенности и преимущества
               </h4>
               <ul className="space-y-2 mb-6">
-                {categoryData.features.map((feature, index) => (
-                  <li key={index} className="flex items-start">
-                    <Icon
-                      name="CheckCircle"
-                      className="h-5 w-5 text-green-500 mr-2 mt-0.5 shrink-0"
-                    />
-                    <span>{feature}</span>
-                  </li>
-                ))}
+                {categoryDescriptions[categoryId].features.map(
+                  (feature, index) => (
+                    <li key={index} className="flex items-start">
+                      <Icon
+                        name="CheckCircle"
+                        className="h-5 w-5 text-green-500 mr-2 mt-0.5 shrink-0"
+                      />
+                      <span>{feature}</span>
+                    </li>
+                  ),
+                )}
               </ul>
             </TabsContent>
             <TabsContent value="specs" className="mt-0">
@@ -327,7 +333,7 @@ const CategoryDetail = () => {
                 Технические характеристики
               </h3>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-4">
-                {categoryData.specs.map((spec, index) => (
+                {categoryDescriptions[categoryId].specs.map((spec, index) => (
                   <div
                     key={index}
                     className="flex items-center py-2 border-b border-gray-100"
@@ -342,7 +348,9 @@ const CategoryDetail = () => {
               <h3 className="text-xl font-semibold mb-4">
                 Галерея изображений
               </h3>
-              <CategoryGallery images={categoryData.gallery} />
+              <CategoryGallery
+                images={categoryDescriptions[categoryId].gallery}
+              />
             </TabsContent>
           </div>
         </Tabs>

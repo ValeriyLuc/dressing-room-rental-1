@@ -180,12 +180,31 @@ const CategoryDetail = () => {
     },
   };
 
-  const categoryData = categoryDescriptions[categoryId || ""] || {
-    full: "Подробное описание отсутствует.",
-    specs: [],
-    features: [],
-    gallery: [],
-  };
+  // Если у нас категория гримерных комнат, обновим галерею с новым изображением
+  if (categoryId === "makeup-rooms") {
+    categoryData.gallery = [
+      {
+        url: "https://cdn.poehali.dev/files/3f5cc244-bf81-4bfa-bcda-f7cb247acf86.jpg",
+        title: "Гримерные комнаты в павильоне",
+      },
+      {
+        url: "https://cdn.poehali.dev/files/625cc90b-5f85-4bfa-9993-c31434abd0d4.jpg",
+        title: "Звукоизоляционная гримерная комната",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1617575521317-d2974f3b56d2?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        title: "Рабочее место гримера",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1588117305388-c2631a279f82?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        title: "Система хранения в гримерной",
+      },
+      {
+        url: "https://images.unsplash.com/photo-1631140528121-f3210cc58e8a?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80",
+        title: "Освещение гримерной зоны",
+      },
+    ];
+  }
 
   return (
     <div className="min-h-screen flex flex-col">

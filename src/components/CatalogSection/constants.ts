@@ -78,7 +78,7 @@ export const products: Product[] = [
       "Специально разработанное пространство с максимальной звуковой изоляцией для комфортной подготовки участников телевизионных шоу",
     price: 25000,
     image:
-      "https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/625cc90b-5f85-4bfa-9993-c31434abd0d4.jpg",
     category: "makeup-rooms",
     tags: ["звукоизоляция", "премиум"],
   },

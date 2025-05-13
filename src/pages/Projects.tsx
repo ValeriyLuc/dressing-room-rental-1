@@ -98,14 +98,14 @@ const projects = [
   },
   {
     id: "project6",
-    title: "Мечта",
-    category: "music",
-    year: "2022",
-    client: "Группа 'Стихия'",
+    title: "Шоу Пятеро на одного",
+    category: "shows",
+    year: "2025",
+    client: "телеканал Россия-1",
     description:
-      "Клип популярной музыкальной группы. Мы предоставили декорации и мебель в стиле футуризма для создания уникальной атмосферы.",
+      "Интеллектуальное телешоу, в котором команда из пяти эрудитов противостоит одному игроку. Наша компания предоставила комплексное оборудование гримерных зон и подготовила техническое оснащение студии.",
     image:
-      "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/dc40369e-e5f2-40e4-85b6-b1d9f9c71eba.jfif",
     gallery: [
       "https://images.unsplash.com/photo-1522536421511-14c9073df899?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1570420118092-5b96e28ff4cb?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",

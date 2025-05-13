@@ -18,14 +18,14 @@ const projectCategories = [
 const projects = [
   {
     id: "project1",
-    title: "Тайна древнего города",
-    category: "films",
+    title: "Шоу Маска",
+    category: "shows",
     year: "2023",
-    client: "Мосфильм",
+    client: "Первый канал",
     description:
-      "Исторический фильм о поисках артефактов в древнем городе. Наша компания обеспечила гримерные комнаты и аутентичную мебель для исторических сцен.",
+      "Популярное музыкальное телешоу, где знаменитости выступают в невероятных костюмах. Наша компания обеспечила гримерные комнаты и зоны отдыха для участников шоу.",
     image:
-      "https://images.unsplash.com/photo-1578674473215-9e297dae8c6c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/6ca77d57-20e0-4218-b704-08652f3b4326.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1523781366603-73ee95b9d8e0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1534649643822-e7431de08af6?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",

@@ -34,14 +34,14 @@ const projects = [
   },
   {
     id: "project2",
-    title: "Новая жизнь",
-    category: "series",
+    title: "Шоу Гладиаторы",
+    category: "shows",
     year: "2022",
-    client: "Централ Партнершип",
+    client: "Телеканал НТВ",
     description:
-      "Драматический сериал о судьбах людей в современном мегаполисе. Мы предоставили мобильные гримерки и современную мебель для различных локаций.",
+      "Масштабное спортивное шоу, в котором участники проходят сложные испытания на арене. Наша компания обеспечила гримерные комнаты и тренировочные зоны для участников проекта.",
     image:
-      "https://images.unsplash.com/photo-1598899134739-24c46f58b8c0?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/bb7e8534-347c-42cc-be12-4c5f6c35d7dd.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1617225169880-c7b016ad1d82?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1572869395636-89406900064b?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",

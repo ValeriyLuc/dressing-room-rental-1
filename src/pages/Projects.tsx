@@ -66,14 +66,14 @@ const projects = [
   },
   {
     id: "project4",
-    title: "Сезоны любви",
-    category: "series",
-    year: "2021",
-    client: "Netflix Россия",
+    title: "Шоу Ярче звёзд",
+    category: "shows",
+    year: "2025",
+    client: "телеканал ТНТ",
     description:
-      "Романтический сериал о сложностях отношений в разные времена года. Мы предоставили полный комплект оборудования для съемочных площадок.",
+      "Масштабное талант-шоу с участием знаменитостей. Наша компания обеспечила профессиональные гримерные комнаты и декорации для создания идеальной атмосферы на съемочной площадке.",
     image:
-      "https://images.unsplash.com/photo-1504898770365-14faca6a7320?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/6ccb82b8-5f89-4a1e-986e-c8aaecb406ae.jfif",
     gallery: [
       "https://images.unsplash.com/photo-1464146072230-91cabc968266?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1517841789643-2685642fcb43?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",

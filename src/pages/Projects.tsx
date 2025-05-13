@@ -82,14 +82,14 @@ const projects = [
   },
   {
     id: "project5",
-    title: "Авто Премиум",
-    category: "commercials",
-    year: "2023",
-    client: "Автоконцерн Премиум",
+    title: "Шоу Большой Хит",
+    category: "shows",
+    year: "2025",
+    client: "телеканал ТНТ",
     description:
-      "Серия премиальных рекламных роликов для нового автомобиля. Мы обеспечили освещение и мебель для создания роскошных интерьеров.",
+      "Музыкальное шоу, где участники соревнуются в создании хитовых песен. Наша компания обеспечила комплексное техническое оснащение сцены, включая судейские столы и гримерные комнаты.",
     image:
-      "https://images.unsplash.com/photo-1550846088-10294f0656f1?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
+      "https://cdn.poehali.dev/files/6e0caf19-1139-4567-bf4e-5ffdb9e2b4ce.jpg",
     gallery: [
       "https://images.unsplash.com/photo-1619120238346-978e07731e77?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
       "https://images.unsplash.com/photo-1507878866276-a947ef722fee?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80",
@@ -158,7 +158,7 @@ const Projects = () => {
               Портфолио
             </Badge>
             <h2 className="text-3xl md:text-4xl font-bold mb-4">
-              Проекты, которыми мы гордимся
+              Проекты, которыми мы гордимимся
             </h2>
             <p className="text-gray-600 max-w-2xl mx-auto">
               За годы работы мы участвовали в сотнях успешных проектов
@@ -387,7 +387,7 @@ const Projects = () => {
             <div className="text-center">
               <div className="bg-primary/10 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-4 relative">
                 <span className="text-2xl font-bold text-primary">3</span>
-                <div className="absolute -right-8 top-1/2 h-0.5 w-16 bg-gray-200 hidden md:block"></div>
+                <div className="absolute -right-8 топ-1/2 h-0.5 w-16 bg-gray-200 hidden md:block"></div>
               </div>
               <h3 className="text-xl font-semibold mb-2">Подготовка</h3>
               <p className="text-gray-600">
